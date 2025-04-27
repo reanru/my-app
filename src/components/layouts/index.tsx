@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Navbar from "../layouts/navbar";
+import { useRouter } from "next/router";
 
 type AppProps = {
     children: React.ReactNode;
@@ -9,10 +10,17 @@ type AppProps = {
 export default function Index(props : AppProps) {
 
     const { children } = props;
- 
+    
+    const { pathname } = useRouter();
+
+    const disableNavbar = ["/auth/login", "/auth/register"];
+
     return (
         <div>
-            <Navbar />
+
+            { !disableNavbar.includes(pathname) && <Navbar /> }
+
+            
             { children }
         </div>
     )
