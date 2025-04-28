@@ -7,7 +7,7 @@
     return (
         <div>
             <h1>Detail Product</h1>
-            <p>Product : {query.id}</p>
+            <p>Product : {query?.id}</p>
         </div>
     )
  }

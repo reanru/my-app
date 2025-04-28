@@ -3,6 +3,8 @@
 // import { Geist, Geist_Mono } from "next/font/google";
 // import styles from "@/styles/Home.module.css";
 
+import Head from "next/head"
+
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
 //   subsets: ["latin"],
@@ -16,6 +18,9 @@
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>My App</title>
+      </Head>
       <div>
         <div>
           Heloo testing!

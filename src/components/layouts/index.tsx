@@ -13,7 +13,7 @@ export default function Index(props : AppProps) {
     
     const { pathname } = useRouter();
 
-    const disableNavbar = ["/auth/login", "/auth/register"];
+    const disableNavbar = ["/auth/login","/auth/register","/404"];
 
     return (
         <div>
