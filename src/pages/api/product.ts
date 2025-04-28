@@ -6,14 +6,16 @@ type Data = {
     status: string;
     statusCode: number;
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    data: any;
+    data: any
 };
 
 export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<Data>,
 ) {
-    const data = await retreiveData("products")
-    
+    // const data = await retreiveData("shops")
+
+    const data = await retreiveData("products");
+
     res.status(200).json({status: "success", statusCode:200, data});
 }
