@@ -2,13 +2,7 @@ import React from 'react'
 
 import styles from "./product.module.scss"
 
-type ProductType = {
-    id: string;
-    name: string;
-    price: number;
-    category: string;
-    image: string
-}
+import { ProductType } from "@/types/product.type";
 
 export default function Index({products}: {products: ProductType[]}) {
   return (
