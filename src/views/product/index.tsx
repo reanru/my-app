@@ -3,6 +3,7 @@ import React from 'react'
 import styles from "./product.module.scss"
 
 import { ProductType } from "@/types/product.type";
+import Link from "next/link";
 
 export default function Index({products}: {products: ProductType[]}) {
   return (
@@ -19,8 +20,9 @@ export default function Index({products}: {products: ProductType[]}) {
             ) : (
                 <>
                     {products.map((data: ProductType) => (
-                        <div 
+                        <Link
                             key={data.id}
+                            href={`product/${data.id}`}
                             className={styles.product__content__item}
                         >
                             <div className={styles.product__content__item__image}>
@@ -34,7 +36,7 @@ export default function Index({products}: {products: ProductType[]}) {
                                     currency: "IDR"
                                 })}
                             </p>
-                        </div>
+                        </Link>
                     ))}
                 </>
             ) }
